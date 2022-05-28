@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+
+    <script>
+        firebase.initializeApp({
+            projectId: ''//projectId
+        });
+        var db = firebase.firestore();
+
+        // var ref = db.collection('fruit').doc('apple');
+
+        // ref.set({
+        //     total: 150,
+        //     good: 20,
+        //     sale: 50
+        // }).then(() => {
+        //     console.log('set data successful');
+        // });
+
+        // ref.update({
+        //     total: 250,
+        //     good: 320,
+        //     sale: 250
+        // }).then(() => {
+        //     console.log('set data successful');
+        // });
+
+        // ref.delete().then(() => {
+        //     console.log('delete data successful');
+        // });
+
+        // var ref = db.collection('fruit');
+
+        // ref.get().then(querySnapshot => {
+        //   querySnapshot.forEach(doc => {
+        //     console.log(doc.id, doc.data());
+        //   });
+        // });
+
+        var db = firebase.firestore();
+        var ref = db.collection('fruit');
+
+
+        // 即時監聽變化
+        // ref.onSnapshot(querySnapshot => {
+        //     querySnapshot.forEach(doc => {
+        //         console.log(doc.id, doc.data());
+        //     });
+        // });
+
+        // where 過濾 
+        // ref.where('sale', '<', 250).get().then(querySnapshot => {
+        //     querySnapshot.forEach(doc => {
+        //         console.log(doc.id, doc.data());
+        //     });
+        // });
+
+        // 多個 where 過濾
+        // var ref = db.collection('fruit');
+        // ref.where('total', '>=', 200).where('total', '<=', 400).get().then(querySnapshot => {
+        //     querySnapshot.forEach(doc => {
+        //         console.log(doc.id, doc.data());
+        //     });
+        // });
+
+        // 排序、限制筆數
+        // var ref = db.collection('fruit');
+        // ref.orderBy('total', 'desc').limit(3).get().then(querySnapshot => {
+        //     querySnapshot.forEach(doc => {
+        //         console.log(doc.id, doc.data());
+        //     });
+        // });
+    </script>
+
+</body>
+
+</html>
